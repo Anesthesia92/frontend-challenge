@@ -1,10 +1,37 @@
 mat-toolbar {
   height: 64px;
   width: 100%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 .header-container {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   display: flex;
+  &__all {
+    width: 120px;
+    height: inherit;
+  }
+  &__like {
+    width: 173px;
+    height: inherit;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .text:hover, .text:active {
+    text-decoration: underline;
+    transition-duration: 700ms;
+  }
+  .active-link {
+    height: 64px;
+    background-color: #5c359f;
+  }
 }

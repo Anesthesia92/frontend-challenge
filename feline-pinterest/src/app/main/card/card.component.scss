@@ -1,0 +1,10 @@
+.card {
+  width: 225px;
+  height: 225px;
+  box-shadow: none;
+}
+.card:hover, .card:active {
+  width: 256px;
+  height: 256px;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Image} from "../interfaces/Image";
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  @Input() imgUrl: any;
+
+  public items: Image[] = [];
+
+  constructor() {
+    this.items.length = 15
+  }
 
   ngOnInit(): void {
   }

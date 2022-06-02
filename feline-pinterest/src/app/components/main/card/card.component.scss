@@ -1,7 +1,17 @@
 .card {
-  width: 225px;
   height: 225px;
+  width: 225px;
   box-shadow: none;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    min-width: 100%;
+    height: auto;
+  }
 }
 .card:hover, .card:active {
   width: 256px;

@@ -1,6 +1,6 @@
 <ng-container>
   <div class="main-container">
-<app-card></app-card>
+    <app-card *ngFor="let i of items"></app-card>
   </div>
   <p class="loading">... загружаем еще котиков ...</p>
 </ng-container>

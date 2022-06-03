@@ -10,7 +10,7 @@ import {Image} from "../../interfaces/Image";
 
 export class CardComponent {
 
-  @Output() imgUrl: any
+  @Output() imgUrl: string | undefined;
 
   constructor(public http: HttpClient) { }
 

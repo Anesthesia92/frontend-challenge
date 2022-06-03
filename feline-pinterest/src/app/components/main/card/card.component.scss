@@ -7,8 +7,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-size: cover ;
-
+  background-size: cover;
+  position: relative;
+  button {
+    position: absolute;
+  }
 }
 .card:hover, .card:active {
   width: 256px;

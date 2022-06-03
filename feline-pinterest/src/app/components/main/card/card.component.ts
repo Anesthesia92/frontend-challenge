@@ -10,7 +10,7 @@ import {Image} from "../../interfaces/Image";
 
 export class CardComponent {
 
-  @Output() imgUrl: string | undefined;
+  @Output() imgUrl: string[] | undefined;
 
   constructor(public http: HttpClient) { }
 
@@ -19,10 +19,10 @@ export class CardComponent {
   }
 
   public getImgUrl(): void {
-  this.http.get<Image[]>('https://api.thecatapi.com/v1/images/search?limit=10&page=0').subscribe(response =>
+  this.http.get<Image[]>('https://api.thecatapi.com/v1/images/search?limit=15&page=0').subscribe(response =>
   {
-    this.imgUrl = response[0].url
-    console.log(response)
+    this.imgUrl = response.map(item => item.url);
+    console.log(this.imgUrl)
   })
 
   }

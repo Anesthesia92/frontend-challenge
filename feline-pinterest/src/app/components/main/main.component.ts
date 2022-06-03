@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Image} from "../interfaces/Image";
 
 @Component({
@@ -8,18 +8,20 @@ import {Image} from "../interfaces/Image";
 })
 export class MainComponent implements OnInit {
 
-  @Input() imgUrl: string | undefined;
+  @Input() imgUrl: string[] | undefined;
 
-  public items: any[] = [];
-  public childItems: Image[] = [];
+  public items: Object[] = [];
+
+  @Output() childItems: Image[] = [];
 
   ngOnInit(): void {
     this.getIcons();
   }
 
   public getIcons(): void {
-    this.childItems.length = 15;
+    this.childItems.length = 1;
     this.addNewCats();
+    console.log(this.childItems)
   }
 
   public addNewCats(): void {

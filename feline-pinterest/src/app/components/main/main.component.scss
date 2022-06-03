@@ -1,10 +1,15 @@
+app-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .main-container {
   width: 1400px;
   display: flex;
   height: 923px;
   flex-wrap: wrap;
-  margin: 46px auto 0;
-  justify-content: space-evenly;
+  margin: 0 auto;
   align-items: center;
 }
 .loading {

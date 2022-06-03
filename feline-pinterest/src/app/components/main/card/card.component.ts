@@ -1,4 +1,4 @@
-import {Component, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Image} from "../../interfaces/Image";
 
@@ -12,6 +12,12 @@ export class CardComponent {
 
   @Output() imgUrl: string[] | undefined;
 
+  public likes: Object[] = [];
+
+  public toggleFilter = false;
+
+  public changeFilterComponent = new EventEmitter<boolean>();
+
   constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
@@ -24,6 +30,11 @@ export class CardComponent {
     this.imgUrl = response.map(item => item.url);
     console.log(this.imgUrl)
   })
-
   }
+
+  public toggleFilterComponent() {
+    this.toggleFilter = ! this.toggleFilter
+    this.changeFilterComponent.emit(true)
+  }
+
 }

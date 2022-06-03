@@ -1,7 +1,9 @@
 app-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  height: 90%;
+  align-content: stretch;
+  justify-content: space-around;
 }
 
 .main-container {

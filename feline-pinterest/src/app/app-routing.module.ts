@@ -4,7 +4,8 @@ import { MainPageComponent } from "./pages/main-page/main-page.component";
 import { FavouriteComponent } from "./components/main/favourite/favourite.component";
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent},
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'main', component: MainPageComponent },
   { path: 'favourite', component: FavouriteComponent}
 ];
 

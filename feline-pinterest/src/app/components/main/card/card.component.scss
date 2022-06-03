@@ -1,0 +1,36 @@
+
+.card {
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  mat-card-content {
+    height: 225px;
+    width: 225px;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    margin: 0;
+  }
+  mat-card-actions {
+    opacity: 0;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+}
+.card:hover, .card:active {
+  width: 256px;
+  height: 256px;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  transition-duration: 1000ms;
+  mat-card-actions {
+    opacity: 1;
+    display: flex;
+    align-items: flex-end;
+  }
+}

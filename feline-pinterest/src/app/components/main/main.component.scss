@@ -1,0 +1,23 @@
+app-card {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  align-content: stretch;
+  justify-content: space-around;
+}
+
+.main-container {
+  width: 1400px;
+  display: flex;
+  height: 923px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+}
+.loading {
+  margin: 0 auto;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
